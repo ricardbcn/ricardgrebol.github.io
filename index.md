@@ -10,7 +10,7 @@ text-align: justify
   <h3 class="welcome">Welcome</h3>
   <p>
     I am a fifth-year PhD candidate in Economics at <a href="https://www.uu.se/en/department/economics" target="_blank">Uppsala University</a>.
-    I am a labour economist working on minimum wages, job search, and inequality.
+    I am a labour economist studying minimum wages, job search, and inequality.
     I also work on political economy and economic history.
   </p>
   <p>You can find my <strong><a href="resume/CV_RicardGrebol.pdf" target="_blank">CV here</a></strong>.</p>
@@ -104,7 +104,7 @@ text-align: justify
 
   <dd class="indented">
     <p>with <a href="https://sites.google.com/site/borgin/" target="_blank">Boris Ginzburg</a> and <a href="https://janstuhler.com/" target="_blank">Jan Stuhler</a><br>
-    <i>Preliminary draft available upon request</i>
+    <i>Draft available upon request</i>
   </p>
 
   <p class="paper-row" style="margin:1px 0 0;">
@@ -134,7 +134,7 @@ text-align: justify
 
   <dd class="indented">
     <p>with <a href="https://sites.google.com/site/lenahensvik" target="_blank">Lena Hensvik</a>, <a href="https://sites.google.com/site/tlebarbanchon/home" target="_blank">Thomas Le Barbanchon</a>, and <a href="https://sites.google.com/site/oskarskans/home" target="_blank">Oskar Nordström Skans</a><br>
-    <i>Preliminary draft available upon request</i>
+    <i>Draft available upon request</i>
   </p>
 
   <p class="paper-row" style="margin:1px 0 0;">
