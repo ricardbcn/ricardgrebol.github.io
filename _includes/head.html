@@ -1,0 +1,60 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Metadata and mobile viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Blog tag infrastructure -->
+  {% if site.tags != "" %}
+    {% include collecttags.html %}
+  {% endif %}
+
+  <title>
+    {% assign tl = site.tagline | to_s | strip %}
+    {% if page.url == "/" %}
+      {{ site.title }}{% if tl != "" %} | {{ tl }}{% endif %}
+    {% else %}
+      {{ page.title | default: site.title }}
+    {% endif %}
+  </title>
+
+  <!-- Colour mode: the visitor's saved choice, else their system setting (light by default). -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (dark ? 'dark' : 'light'));
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ '/' | relative_url }}public/css/poole.css">
+  <link rel="stylesheet" href="{{ '/' | relative_url }}public/css/syntax.css">
+  <link rel="stylesheet" href="{{ '/' | relative_url }}public/css/hyde.css">
+  <link rel="stylesheet" href="{{ '/public/css/custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  
+  <!-- Browser icon -->
+  <link rel="shortcut icon" href="{{ '/' | relative_url }}public/favicon.ico">
+
+  <!-- Atom feed -->
+  <link rel="alternate" type="application/atom+xml" title="Atom feed" href="{{ '/atom.xml' | relative_url }}">
+
+  <!-- MathJax -->
+  {% include mathjax.html %}
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Academicons (Google Scholar icon) -->
+  <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css"
+      integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg="
+      crossorigin="anonymous">
+
+  <!-- SEO -->
+  {% seo %}
+
+</head>

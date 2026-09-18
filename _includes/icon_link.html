@@ -1,0 +1,7 @@
+<a href="{{ include.href | relative_url }}"
+   {% if include.blank %}target="_blank" rel="noopener noreferrer"{% endif %}
+   style="display:inline-flex;align-items:center;gap:.5ch">
+  <img src="{{ include.icon | relative_url }}" alt=""
+       style="width:{{ include.size | default: '1em' }};height:{{ include.size | default: '1em' }}">
+  <span>{{ include.text }}</span>
+</a>

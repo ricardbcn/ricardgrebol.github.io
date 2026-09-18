@@ -1,0 +1,117 @@
+/* Home page spacing */
+.content {
+  padding-top: 2.5rem; /* Starts the bio closer to the top than Hyde's default 4rem. */
+}
+
+.content h3 {
+  margin-top: 2.75rem; /* Space before each section; collapses with the previous block's margin. */
+  margin-bottom: 1rem; /* Keeps each heading closer to its own items than to the section above. */
+}
+
+/* "Welcome" heading and indented bio only when the sidebar sits beside the content. */
+.intro .welcome {
+  display: none;
+}
+
+@media (min-width: 65em) {
+  .intro .welcome {
+    display: block;
+    margin-top: 0; /* The content padding already provides the top space. */
+  }
+
+  .intro p {
+    margin-left: 2.5em; /* Matches .indented under the other section headings. */
+  }
+}
+
+/* Cooper Hewitt has no synthesized bold, so use its bold cut directly. */
+.jm-line {
+  font-family: 'CH_bold';
+  font-weight: normal;
+}
+
+.indented {
+  margin-left: 2.5em;
+}
+
+.paper-spacer {
+  height: 22px;
+}
+
+/* Keep Font Awesome families scoped to icon classes. */
+.fa-solid,
+.fa-regular {
+  font-family: "Font Awesome 6 Free" !important;
+}
+
+.fa-solid {
+  font-weight: 900 !important;
+}
+
+.fa-regular {
+  font-weight: 400 !important;
+}
+
+.fa-brands {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400 !important;
+}
+
+/* Paper links and abstract controls */
+a.paper {
+  display: inline-flex;
+  align-items: center;
+  gap: .5ch;
+  line-height: 1;
+  margin: 0;
+}
+
+.paper-row {
+  display: flex;
+  align-items: baseline;
+  gap: .5ch;
+}
+
+.abs-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .4ch;
+  text-decoration: none;
+}
+
+.abs-toggle:hover {
+  text-decoration: none;
+}
+
+.abs-toggle .sign {
+  display: inline-grid;
+  place-items: center;
+  width: 1em;
+  height: 1em;
+  border: 1px solid currentColor;
+  border-radius: .2em;
+  line-height: 1;
+  font-weight: 600;
+}
+
+
+/* Paper status labels */
+.jmp-label {
+  color: var(--forest-accent, #8C6A3A);
+}
+
+.paper-note {
+  color: var(--forest-muted, #6F7F74);
+  font-style: italic;
+}
+
+/* Teaching: one line per course under the institution header */
+.course-list {
+  list-style: none;
+  margin: .25rem 0 0;
+  padding: 0;
+}
+
+.course-list li {
+  margin-bottom: .15rem;
+}

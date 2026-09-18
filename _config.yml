@@ -1,0 +1,44 @@
+highlighter:      rouge
+title:            "Ricard Grebol"
+tagline:          ''
+description:      'PhD candidate in Economics at Uppsala University'
+url:              https://ricardgrebol.com
+baseurl:          ''
+
+author:
+  name:           'Ricard Grebol'
+  email:          'ricard.grebol@nek.uu.se'
+
+paginate:         10
+paginate_path:    "/blog/page:num/"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-commonmark-ghpages
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+disqus:
+  shortname: ricardgrebol
+
+# Optional Google Analytics 4 measurement ID. Leave blank to disable analytics.
+google_analytics: ''
+
+# Default values applied by Jekyll.
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      classes: "wide"
+      comments: true
+      social-share: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+      classes: "wide"
