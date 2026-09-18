@@ -41,12 +41,16 @@
 
   .sidebar-about {
     display: flow-root; /* Prevents the heading margin from collapsing upward. */
-    padding: 14px 20px 0 !important;
+    padding: 14px 20px 14px !important; /* Same green margin below the menu as above the name. */
     border-top: 1px solid transparent; /* Preserves the gap below the portrait. */
   }
 
   .sidebar-about h1 {
     margin-top: 0 !important;
+  }
+
+  .sidebar-about > br:last-child {
+    display: none; /* Drops the empty line under the menu. */
   }
 
   /* Keep the title and affiliation on one line in stacked layouts; the break
@@ -134,10 +138,6 @@
     .desktop-break {
       display: inline;
     }
-
-    .sidebar-links {
-      margin-bottom: 0;
-    }
   }
 
   /* Keep the portrait and bio in separate rows on desktop. */
@@ -177,21 +177,18 @@
     }
 
     .sidebar-about h1 {
-      font-size: clamp(1.55rem, 5vh, 2.2rem) !important;
+      font-size: clamp(1.43rem, 4.6vh, 2.02rem) !important;
     }
 
     .sidebar-about .lead {
-      margin-bottom: 0; /* Profile icons sit right under the email line on desktop. */
+      margin-bottom: .35rem; /* Keeps the profile icons close to the email line. */
       font-size: clamp(0.8rem, 2.1vh, 0.9rem) !important;
     }
 
     .sidebar-about > span {
-      height: 0.25em !important; /* Small gap between the profile icons and the menu. */
+      height: clamp(0.2em, 1.143vh, 0.5em) !important;
     }
 
-    .sidebar-about > br:last-child {
-      display: none;
-    }
 
     .content {
       margin-left: calc(var(--sidebar-width) + 6rem);
@@ -205,7 +202,7 @@
     <img src="/photos/N22-1508.jpg" class="sidebar-photo" alt="Portrait of Ricard Grebol">
     <div class="sidebar-about">
       <a href="{{ '/' | relative_url }}" style="color: white;">
-        <h1 style="color: white; font-size: 2.2rem; margin-bottom: 1px;">RICARD GREBOL</h1>
+        <h1 style="color: white; font-size: 2.02rem; margin-bottom: 1px;">RICARD GREBOL</h1>
       </a>
       <p class="lead" style="font-size: 0.9rem">
         PhD candidate in Economics, <br class="desktop-break"><a href="https://www.uu.se/institution/nationalekonomiska/" target="_blank">Uppsala University</a>

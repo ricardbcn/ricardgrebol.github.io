@@ -3,6 +3,13 @@
   padding-top: 2.5rem; /* Starts the bio closer to the top than Hyde's default 4rem. */
 }
 
+/* Less white space between the stacked sidebar and the bio on phones and tablets. */
+@media (max-width: 64.999em) {
+  .content {
+    padding-top: 1.5rem;
+  }
+}
+
 .content h3 {
   margin-top: 2.75rem; /* Space before each section; collapses with the previous block's margin. */
   margin-bottom: 1.5rem; /* Keeps each heading closer to its own items than to the section above. */
@@ -32,7 +39,7 @@
 /* Bolder paper titles on desktop; phones keep the lighter weight. */
 @media (min-width: 65em) {
   .content dt strong {
-    font-family: 'CH_semibold';
+    font-family: 'CH_medium';
     font-weight: normal;
   }
 }
