@@ -5,7 +5,7 @@
 
 .content h3 {
   margin-top: 2.75rem; /* Space before each section; collapses with the previous block's margin. */
-  margin-bottom: 1rem; /* Keeps each heading closer to its own items than to the section above. */
+  margin-bottom: 1.25rem; /* Keeps each heading closer to its own items than to the section above. */
 }
 
 /* "Welcome" heading and indented bio only when the sidebar sits beside the content. */

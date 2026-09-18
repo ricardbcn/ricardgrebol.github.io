@@ -49,12 +49,22 @@
     margin-top: 0 !important;
   }
 
+  /* Keep the title and affiliation on one line in stacked layouts; the break
+     is only shown when the sidebar sits beside the content. */
+  .desktop-break {
+    display: none;
+  }
+
+  .sidebar-about .lead {
+    margin-bottom: .35rem; /* Keeps the profile icons close to the email line. */
+  }
+
   /* Profile links (Google Scholar, CV) under the contact details. */
   .sidebar-links {
     display: flex;
     justify-content: center; /* Matches the centred mobile sidebar. */
     gap: .9rem;
-    margin: .1rem 0 .6rem;
+    margin: 0 0 .3rem;
     font-size: 1.35rem;
     line-height: 1;
   }
@@ -120,6 +130,10 @@
     .sidebar-links {
       justify-content: flex-end;
     }
+
+    .desktop-break {
+      display: inline;
+    }
   }
 
   /* Keep the portrait and bio in separate rows on desktop. */
@@ -163,7 +177,7 @@
     }
 
     .sidebar-about .lead {
-      margin-bottom: clamp(0.35rem, 2.286vh, 1rem);
+      margin-bottom: .35rem; /* Keeps the profile icons close to the email line. */
       font-size: clamp(0.8rem, 2.1vh, 0.9rem) !important;
     }
 
@@ -190,7 +204,7 @@
         <h1 style="color: white; font-size: 2.2rem; margin-bottom: 1px;">RICARD GREBOL</h1>
       </a>
       <p class="lead" style="font-size: 0.9rem">
-        PhD candidate in Economics, <a href="https://www.uu.se/institution/nationalekonomiska/" target="_blank">Uppsala University</a>
+        PhD candidate in Economics, <br class="desktop-break"><a href="https://www.uu.se/institution/nationalekonomiska/" target="_blank">Uppsala University</a>
         <br>
         <a href="mailto:ricard.grebol@nek.uu.se"><span class="has-tooltip" data-tooltip="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>&nbsp;ricard.grebol@nek.uu.se</a>
       </p>
