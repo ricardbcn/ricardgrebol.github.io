@@ -134,6 +134,10 @@
     .desktop-break {
       display: inline;
     }
+
+    .sidebar-links {
+      margin-bottom: 0;
+    }
   }
 
   /* Keep the portrait and bio in separate rows on desktop. */
@@ -177,12 +181,12 @@
     }
 
     .sidebar-about .lead {
-      margin-bottom: .35rem; /* Keeps the profile icons close to the email line. */
+      margin-bottom: 0; /* Profile icons sit right under the email line on desktop. */
       font-size: clamp(0.8rem, 2.1vh, 0.9rem) !important;
     }
 
     .sidebar-about > span {
-      height: clamp(0.2em, 1.143vh, 0.5em) !important;
+      height: 0.25em !important; /* Small gap between the profile icons and the menu. */
     }
 
     .sidebar-about > br:last-child {

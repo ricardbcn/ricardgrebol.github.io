@@ -5,7 +5,7 @@
 
 .content h3 {
   margin-top: 2.75rem; /* Space before each section; collapses with the previous block's margin. */
-  margin-bottom: 1.25rem; /* Keeps each heading closer to its own items than to the section above. */
+  margin-bottom: 1.5rem; /* Keeps each heading closer to its own items than to the section above. */
 }
 
 /* "Welcome" heading and indented bio only when the sidebar sits beside the content. */
@@ -21,6 +21,19 @@
 
   .intro p {
     margin-left: 2.5em; /* Matches .indented under the other section headings. */
+  }
+}
+
+/* Half the usual paragraph gap between a paper's details and its Draft/Abstract links. */
+.content dd > p:has(+ .paper-row) {
+  margin-bottom: .5rem;
+}
+
+/* Bolder paper titles on desktop; phones keep the lighter weight. */
+@media (min-width: 65em) {
+  .content dt strong {
+    font-family: 'CH_semibold';
+    font-weight: normal;
   }
 }
 
