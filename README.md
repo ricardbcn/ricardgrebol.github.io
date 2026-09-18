@@ -1,218 +1,190 @@
-# Web académica de Ricard Grebol
+# Ricard Grebol – academic website
 
-Código fuente de <https://ricardgrebol.com>, una web académica construida
-con Jekyll y publicada mediante GitHub Pages.
+Source code for <https://ricardgrebol.com>, an academic website built with
+Jekyll and published with GitHub Pages.
 
-## Publicación
+## Publishing
 
-El flujo de trabajo utiliza GitHub Pages como entorno de construcción, por lo
-que no requiere una instalación local de Ruby, Bundler o Jekyll:
+GitHub Pages builds the site, so no local Ruby, Bundler or Jekyll installation
+is needed. Commit and push to `main` (from GitHub Desktop or the command line):
 
 ```sh
 git add -A
-git commit -m "Descripción del cambio"
+git commit -m "Describe the change"
 git push origin main
 ```
 
-Cada actualización de `main` inicia una nueva publicación. El estado del
-proceso puede consultarse en la pestaña **Actions** del repositorio. Una vez
-terminado, conviene recargar la web sin caché para comprobar la versión nueva.
+Every push to `main` triggers a new build. Its progress is shown in the
+repository's **Actions** tab. Once it finishes, reload the site without the
+cache to check the new version.
 
-La carpeta generada `_site/`, las credenciales y los tokens privados no deben
-incluirse en el repositorio.
+Never commit the generated `_site/` folder, credentials or private tokens.
 
-## Crear una web a partir de este repositorio
+## Reusing this repository
 
-El repositorio puede bifurcarse en GitHub o clonarse directamente:
+Clone the repository:
 
 ```sh
 git clone https://github.com/ricardbcn/ricardgrebol.github.io.git
 ```
 
-Para adaptar una copia:
+To adapt a copy:
 
-1. Sustituir el título, la descripción, la URL y los datos del autor en
-   `_config.yml`.
-2. Actualizar la fotografía, el nombre, el correo y la navegación en
+1. Replace the title, description, URL and author details in `_config.yml`.
+2. Update the portrait, name, email, profile links and navigation in
    `_includes/sidebar.html`.
-3. Reemplazar el contenido académico en `index.md` y los archivos de
-   `papers/`, `photos/` y `resume/`.
-4. Eliminar `CNAME` si no se utiliza un dominio propio, o sustituir su
-   contenido por el dominio correspondiente.
-5. Activar GitHub Pages desde **Settings → Pages**, publicando la rama `main`
-   desde la raíz del repositorio.
+3. Replace the academic content in `index.md` and the files in `papers/`,
+   `photos/` and `resume/`.
+4. Delete `CNAME` if no custom domain is used, or replace its content with
+   your own domain.
+5. Enable GitHub Pages under **Settings → Pages**, publishing the `main`
+   branch from the repository root.
 
-Para una web de usuario en GitHub Pages, el repositorio suele llamarse
-`usuario.github.io`.
+## Main structure
 
-## Estructura principal
+- `index.md`: home page with the introduction, working papers, work in
+  progress, teaching, publications, abstracts and CV link.
+- `_config.yml`: general Jekyll settings, URL, plugins, comments and analytics.
+- `_includes/sidebar.html`: portrait, name, contact, profile icons (email,
+  Google Scholar, CV), light/dark toggle and navigation.
+- `_includes/head.html`: metadata, initial colour mode, favicon, stylesheets,
+  icon fonts, MathJax, feed and SEO.
+- `_layouts/`: HTML templates shared by pages, posts and tag pages.
+- `public/css/hyde.css`: layout, typography, sidebar and colour themes.
+- `public/css/poole.css`: base styles and theme components.
+- `public/css/custom.css`: home page styles.
+- `papers/`, `photos/` and `resume/`: public documents and images.
+- `CNAME`, `robots.txt` and `atom.xml`: domain, search engine rules and feed.
 
-- `index.md`: página principal, publicaciones, proyectos, resúmenes, docencia
-  y enlaces al CV.
-- `_config.yml`: configuración general de Jekyll, URL, extensiones,
-  comentarios y analítica.
-- `_includes/sidebar.html`: retrato, identidad, contacto y navegación.
-- `_includes/head.html`: metadatos, favicon, hojas de estilo, MathJax, feed y
-  SEO.
-- `_layouts/`: estructuras HTML reutilizadas por páginas, entradas y
-  etiquetas.
-- `public/css/hyde.css`: layout, tipografía, barra lateral y temas de color.
-- `public/css/poole.css`: estilos base y componentes del tema.
-- `public/css/custom.css`: estilos específicos de la página principal.
-- `papers/`, `photos/` y `resume/`: documentos e imágenes públicas.
-- `CNAME`, `robots.txt` y `atom.xml`: dominio, indexación y feed.
+## Common updates
 
-## Actualizaciones habituales
-
-- **Cambiar el retrato:** sustituir `photos/N22-1508.jpg` conservando el
-  nombre, o modificar el atributo `src` correspondiente en
+- **Change the portrait:** replace `photos/N22-1508.jpg` keeping the same
+  name, or change the `src` attribute in `_includes/sidebar.html`.
+- **Update the CV:** replace `resume/CV_RicardGrebol.pdf`. If the file name
+  changes, update its links in `index.md` and `_includes/sidebar.html`.
+- **Add or update a paper:** save the PDF in `papers/` and edit its title,
+  co-authors, link and abstract in `index.md`.
+- **Edit the introduction, projects or teaching:** edit the matching section
+  of `index.md`.
+- **Change contact details, navigation or profile links:** edit
   `_includes/sidebar.html`.
-- **Actualizar el CV:** sustituir `resume/CV_RicardGrebol.pdf`; si cambia el
-  nombre del archivo, actualizar también sus enlaces en `index.md` y
-  `_includes/sidebar.html`.
-- **Añadir o actualizar un artículo:** guardar el PDF en `papers/` y editar
-  en `index.md` el título, los autores, el enlace y el resumen.
-- **Editar la presentación, los proyectos o la docencia:** modificar la sección
-  correspondiente de `index.md`.
-- **Cambiar los datos de contacto, la navegación o los enlaces de perfil
-  (Google Scholar, CV):** editar `_includes/sidebar.html`.
-- **Cambiar colores o estilos:** el tema activo es `theme-base-forest`
-  (clase del `body` en `_layouts/default.html`); sus colores se definen como
-  variables al principio de ese tema en `public/css/hyde.css`. Utilizar
-  `public/css/custom.css` para ajustes específicos. Los colores del modo oscuro
-  están en el bloque `html[data-theme="dark"]` del mismo archivo; el modo inicial
-  (preferencia guardada o la del sistema) se fija en `_includes/head.html` y el
-  botón luna/sol está en `_includes/sidebar.html`.
-- **Cambiar el favicon:** sustituir `public/favicon.ico`.
-- **Cambiar el dominio:** actualizar `url` en `_config.yml` y editar o
-  eliminar `CNAME`, según se utilice o no un dominio propio.
+- **Change colours or styles:** the active theme is `theme-base-forest` (the
+  `body` class in `_layouts/default.html`). Its light colours are variables at
+  the start of that theme in `public/css/hyde.css`, and its dark colours are in
+  the `html[data-theme="dark"]` block of the same file. Use
+  `public/css/custom.css` for page-specific tweaks.
+- **Light/dark mode:** the initial mode (the visitor's saved choice, otherwise
+  their system setting, light by default) is set in `_includes/head.html`. The
+  moon/sun button and its script are in `_includes/sidebar.html`.
+- **Change the favicon:** replace `public/favicon.ico`.
+- **Change the domain:** update `url` in `_config.yml` and edit or delete
+  `CNAME`.
 
-## Actualizar contenido
+## Updating content
 
-Conviene mantener estables los nombres públicos de los PDF para no romper
-enlaces existentes. Si cambia un nombre, su referencia en `index.md` debe
-actualizarse en el mismo commit.
+Keep public PDF file names stable so existing links keep working. If a name
+changes, update its reference in `index.md` in the same commit.
 
-La carpeta `papers/` también funciona como histórico de versiones. Un PDF que
-no tenga un enlace activo puede formar parte de ese seguimiento y no debe
-eliminarse únicamente por estar sin referencias.
+Each abstract toggle in `index.md` has:
 
-Cada control de resumen en `index.md` contiene:
+- a link with the `abs-toggle` class;
+- a panel with a unique `id`;
+- a reference to that same `id` in the link's `onclick` attribute.
 
-- un enlace con la clase `abs-toggle`;
-- un panel con un atributo `id` único;
-- una referencia a ese mismo identificador en el atributo `onclick`.
+## Optional blog infrastructure
 
-El catálogo de `photos/` incluye alternativas conservadas para cambios de
-diseño futuros. La ausencia de una referencia activa no implica necesariamente
-que una imagen deba eliminarse.
+The repository keeps support for blog posts, although it currently has none:
 
-## Infraestructura opcional de blog
+- `_layouts/post.html`, `_layouts/page.html` and `_layouts/tagpage.html`;
+- archive, tag, comment and social link includes in `_includes/`;
+- category and feed pages in `category.html` and `atom.xml`;
+- code highlighting in `public/css/syntax.css`;
+- tag page generation with `tag_generator.py`.
 
-El repositorio conserva soporte para publicaciones aunque actualmente no
-contenga entradas:
-
-- `_layouts/post.html`, `_layouts/page.html` y `_layouts/tagpage.html`;
-- archivos de archivo, etiquetas, comentarios y enlaces sociales en
-  `_includes/`;
-- rutas de categorías y feed mediante `category.html` y `atom.xml`;
-- resaltado de código en `public/css/syntax.css`;
-- generación de páginas de etiquetas mediante `tag_generator.py`.
-
-Las entradas se guardan como `_posts/AAAA-MM-DD-identificador.md` con cabecera
-YAML de Jekyll. Después de modificar sus etiquetas, las páginas correspondientes
-pueden regenerarse con:
+Posts go in `_posts/YYYY-MM-DD-slug.md` with Jekyll YAML front matter. After
+changing their tags, regenerate the tag pages with:
 
 ```sh
 python tag_generator.py
 ```
 
-MathJax está disponible para contenido matemático. Google Analytics permanece
-desactivado mientras `google_analytics` esté vacío en `_config.yml`. Disqus se
-configura mediante `disqus.shortname` en el mismo archivo.
+MathJax is available for mathematical content. Google Analytics stays
+disabled while `google_analytics` is empty in `_config.yml`. Disqus is
+configured through `disqus.shortname` in the same file.
 
-## Comprobaciones recomendadas
+## Checks after publishing
 
-Después de publicar, revisar:
+- the home page and the 404 page;
+- links to the CV, papers and images;
+- opening and closing the abstracts;
+- sidebar navigation and scrolling;
+- desktop and phone layouts, in light and dark mode;
+- categories, tags and feed, if the blog is used.
 
-- la página principal y la página 404;
-- los enlaces al CV, los artículos y las imágenes;
-- la apertura y el cierre de los resúmenes;
-- la navegación y el desplazamiento de la barra lateral;
-- el resultado en pantallas de escritorio y móviles;
-- las categorías, etiquetas y el feed si se utiliza el blog.
+## Credits and licences
 
-## Créditos y licencia
+The site is based on [Hyde](https://github.com/poole/hyde), released under the
+MIT licence, which is kept in `LICENSE.md`. The Cooper Hewitt typeface is
+released under the SIL Open Font License 1.1, kept in
+`fonts/cooper_hewitt/OFL.txt`.
 
-La web está basada en [Hyde](https://github.com/poole/hyde), distribuido con
-licencia MIT. La licencia original se conserva en `LICENSE.md`. La tipografía
-Cooper Hewitt se distribuye con licencia SIL Open Font License 1.1, que se
-conserva en `fonts/cooper_hewitt/OFL.txt`.
+## File reference
 
-## Referencia de archivos permanentes
-
-Esta referencia enumera los archivos técnicos que forman la web. No detalla el
-contenido reemplazable de `papers/`, `photos/`, `resume/`, `icons/` o
+This section lists the technical files that make up the site. It does not
+cover the replaceable content of `papers/`, `photos/`, `resume/`, `icons/` or
 `fonts/`.
 
-### Archivos de la raíz
+### Root files
 
-- `.gitignore`: evita que Git registre archivos temporales, cachés y resultados
-  de compilación.
-- `_config.yml`: configuración central de Jekyll, metadatos, URL, extensiones,
-  valores predeterminados, Disqus y Google Analytics.
-- `404.html`: página mostrada cuando una dirección no existe.
-- `atom.xml`: plantilla del feed Atom para las publicaciones del blog.
-- `category.html`: página que agrupa las publicaciones por categorías.
-- `CNAME`: asocia GitHub Pages con el dominio personalizado. Es opcional en
-  copias que utilicen únicamente un dominio `github.io`.
-- `index.md`: contenido y estructura de la página principal.
-- `LICENSE.md`: licencia MIT original del tema.
-- `README.md`: documentación de uso y mantenimiento del repositorio.
-- `robots.txt`: instrucciones básicas para buscadores y referencia al sitemap.
-- `tag_generator.py`: genera las páginas de etiquetas a partir de las entradas
-  almacenadas en `_posts/`.
+- `.gitignore`: keeps temporary files, caches and build output out of Git.
+- `_config.yml`: central Jekyll configuration, metadata, URL, plugins,
+  defaults, Disqus and Google Analytics.
+- `404.html`: page shown when an address does not exist.
+- `atom.xml`: Atom feed template for blog posts.
+- `category.html`: page grouping posts by category.
+- `CNAME`: connects GitHub Pages to the custom domain. Optional for copies that
+  only use a `github.io` address.
+- `index.md`: content and structure of the home page.
+- `LICENSE.md`: the theme's original MIT licence.
+- `README.md`: usage and maintenance documentation.
+- `robots.txt`: basic search engine rules and sitemap reference.
+- `tag_generator.py`: generates tag pages from the posts in `_posts/`.
 
-### Componentes reutilizables: `_includes/`
+### Reusable components: `_includes/`
 
-- `_includes/archive.html`: crea el listado de etiquetas utilizado como
-  archivo del blog.
-- `_includes/collecttags.html`: recopila y ordena las etiquetas presentes en
-  las publicaciones.
-- `_includes/disqus_comments.html`: inserta el sistema de comentarios Disqus
-  cuando está configurado.
-- `_includes/google_analytics.html`: carga Google Analytics 4 únicamente si
-  existe un identificador en `_config.yml`.
-- `_includes/head.html`: construye la sección `<head>` con metadatos, estilos,
-  favicon, feed, MathJax, Font Awesome y SEO.
-- `_includes/icon_link.html`: componente auxiliar para crear enlaces formados
-  por un icono y texto.
-- `_includes/mathjax.html`: configura y carga MathJax para mostrar fórmulas.
-- `_includes/sidebar.html`: define el retrato, la identidad, el contacto y la
-  navegación lateral.
-- `_includes/social_links.html`: genera enlaces sociales cuando existe la
-  configuración opcional `site.data.social`.
+- `_includes/archive.html`: builds the tag list used as the blog archive.
+- `_includes/collecttags.html`: collects and sorts the tags used in posts.
+- `_includes/disqus_comments.html`: adds Disqus comments when configured.
+- `_includes/google_analytics.html`: loads Google Analytics 4 only if an ID is
+  set in `_config.yml`.
+- `_includes/head.html`: builds the `<head>` with metadata, initial colour
+  mode, stylesheets, favicon, feed, MathJax, Font Awesome, Academicons and SEO.
+- `_includes/icon_link.html`: helper for links made of an icon and text.
+- `_includes/mathjax.html`: configures and loads MathJax.
+- `_includes/sidebar.html`: portrait, name, contact, profile icons with hover
+  labels, light/dark toggle and navigation.
+- `_includes/social_links.html`: social links when the optional
+  `site.data.social` setting exists.
 
-### Plantillas de página: `_layouts/`
+### Page templates: `_layouts/`
 
-- `_layouts/default.html`: estructura HTML común, tema activo, cabecera y barra
-  lateral.
-- `_layouts/page.html`: plantilla para páginas convencionales.
-- `_layouts/post.html`: plantilla para entradas, con fecha, etiquetas,
-  publicaciones relacionadas y comentarios.
-- `_layouts/tagpage.html`: plantilla de las páginas que reúnen publicaciones
-  con una misma etiqueta.
+- `_layouts/default.html`: shared HTML structure, active theme, head and
+  sidebar.
+- `_layouts/page.html`: template for regular pages.
+- `_layouts/post.html`: template for posts, with date, tags, related posts and
+  comments.
+- `_layouts/tagpage.html`: template for pages listing posts with the same tag.
 
-### Hojas de estilo: `public/css/`
+### Stylesheets: `public/css/`
 
-- `public/css/custom.css`: reglas específicas de la página principal, enlaces
-  de artículos y controles de resúmenes.
-- `public/css/hyde.css`: layout general, tipografía Cooper Hewitt, barra
-  lateral, temas de color y variantes responsive.
-- `public/css/poole.css`: estilos base para texto, listas, tablas, código,
-  páginas, entradas y paginación.
-- `public/css/syntax.css`: colores utilizados para el resaltado de código.
+- `public/css/custom.css`: home page rules, paper links, abstract toggles,
+  section spacing and teaching list.
+- `public/css/hyde.css`: general layout, Cooper Hewitt typeface, sidebar,
+  colour themes (including dark mode) and responsive variants.
+- `public/css/poole.css`: base styles for text, lists, tables, code, pages,
+  posts and pagination.
+- `public/css/syntax.css`: code highlighting colours.
 
-### Recurso técnico
+### Technical asset
 
-- `public/favicon.ico`: icono principal mostrado por el navegador.
+- `public/favicon.ico`: the browser tab icon.
