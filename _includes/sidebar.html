@@ -63,6 +63,10 @@
     margin-bottom: .35rem; /* Keeps the profile icons close to the email line. */
   }
 
+  .sidebar-about .lead-email {
+    display: block;
+  }
+
   /* Profile links (Google Scholar, CV) under the contact details. */
   .sidebar-links {
     display: flex;
@@ -154,7 +158,8 @@
 
     .sidebar-inner {
       display: grid;
-      grid-template-rows: minmax(0, 1fr) auto;
+      grid-template-rows: minmax(0, max-content) auto; /* The portrait shrinks only on short screens. */
+      align-content: start; /* Name sits right under the portrait; spare space goes to the bottom. */
       row-gap: clamp(5px, 1vh, 8px); /* Guarantees a small green buffer below the portrait. */
       height: 100%;
     }
@@ -171,22 +176,26 @@
       position: static;
       width: 100%;
       box-sizing: border-box;
-      align-self: end;
       padding: clamp(8px, 2vh, 14px) 20px min(1.5rem, 2.667vh) !important;
       font-size: clamp(0.875rem, 2.3vh, 1rem);
     }
 
     .sidebar-about h1 {
       font-size: clamp(1.43rem, 4.6vh, 2.02rem) !important;
+      margin-bottom: .55rem !important; /* Overrides the inline 1px used on phones. */
     }
 
     .sidebar-about .lead {
-      margin-bottom: .35rem; /* Keeps the profile icons close to the email line. */
+      margin-bottom: .8rem; /* Space between the email line and the profile icons. */
       font-size: clamp(0.8rem, 2.1vh, 0.9rem) !important;
     }
 
+    .sidebar-about .lead-email {
+      margin-top: .3rem; /* Separates the email from the affiliation. */
+    }
+
     .sidebar-about > span {
-      height: clamp(0.2em, 1.143vh, 0.5em) !important;
+      height: 0.95em !important; /* Space between the profile icons and the menu. */
     }
 
 
@@ -206,8 +215,7 @@
       </a>
       <p class="lead" style="font-size: 0.9rem">
         PhD candidate in Economics, <br class="desktop-break"><a href="https://www.uu.se/institution/nationalekonomiska/" target="_blank">Uppsala University</a>
-        <br>
-        <a href="mailto:ricard.grebol@nek.uu.se"><span class="has-tooltip" data-tooltip="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>&nbsp;ricard.grebol@nek.uu.se</a>
+        <span class="lead-email"><a href="mailto:ricard.grebol@nek.uu.se"><span class="has-tooltip" data-tooltip="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>&nbsp;ricard.grebol@nek.uu.se</a></span>
       </p>
 
       <!-- Profile links -->

@@ -21,6 +21,10 @@
 }
 
 @media (min-width: 65em) {
+  .content {
+    max-width: 50rem; /* A bit wider than Hyde's 45rem, leaving less white space on the right. */
+  }
+
   .intro .welcome {
     display: block;
     margin-top: 0; /* The content padding already provides the top space. */
