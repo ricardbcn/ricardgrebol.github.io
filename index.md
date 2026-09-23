@@ -103,8 +103,7 @@ text-align: justify
   </dt>
 
   <dd class="indented">
-    <p>with <a href="https://sites.google.com/site/borgin/" target="_blank">Boris Ginzburg</a> and <a href="https://janstuhler.com/" target="_blank">Jan Stuhler</a><br>
-    <i>Draft available upon request</i>
+    <p>with <a href="https://sites.google.com/site/borgin/" target="_blank">Boris Ginzburg</a> and <a href="https://janstuhler.com/" target="_blank">Jan Stuhler</a>
   </p>
 
   <p class="paper-row" style="margin:1px 0 0;">
@@ -133,8 +132,7 @@ text-align: justify
   </dt>
 
   <dd class="indented">
-    <p>with <a href="https://sites.google.com/site/lenahensvik" target="_blank">Lena Hensvik</a>, <a href="https://sites.google.com/site/tlebarbanchon/home" target="_blank">Thomas Le Barbanchon</a>, and <a href="https://sites.google.com/site/oskarskans/home" target="_blank">Oskar Nordström Skans</a><br>
-    <i>Draft available upon request</i>
+    <p>with <a href="https://sites.google.com/site/lenahensvik" target="_blank">Lena Hensvik</a>, <a href="https://sites.google.com/site/tlebarbanchon/home" target="_blank">Thomas Le Barbanchon</a>, and <a href="https://sites.google.com/site/oskarskans/home" target="_blank">Oskar Nordström Skans</a>
   </p>
 
   <p class="paper-row" style="margin:1px 0 0;">
