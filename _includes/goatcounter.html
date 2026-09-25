@@ -1,0 +1,24 @@
+{% assign goatcounter_code = site.goatcounter | to_s | strip %}
+{% if goatcounter_code != "" %}
+<!-- GoatCounter -->
+<script data-goatcounter="https://{{ goatcounter_code }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+  // Count clicks on PDF links (papers, CV) as GoatCounter events.
+  (function() {
+    function trackPdf(e) {
+      var link = e.target.closest && e.target.closest('a[href]');
+      if (!link || !window.goatcounter || !window.goatcounter.count) return;
+      var url = new URL(link.href, location.href);
+      if (!/\.pdf$/i.test(url.pathname)) return;
+      var local = url.host === location.host;
+      window.goatcounter.count({
+        path: local ? url.pathname : url.href,
+        title: (local ? 'Download: ' : 'External PDF: ') + url.pathname.split('/').pop(),
+        event: true
+      });
+    }
+    document.addEventListener('click', trackPdf);
+    document.addEventListener('auxclick', trackPdf);
+  })();
+</script>
+{% endif %}
