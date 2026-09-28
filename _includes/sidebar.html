@@ -94,6 +94,17 @@
     font-size: 1.1em; /* The Academicons glyph is lighter than the Font Awesome ones. */
   }
 
+  /* CV icon: a PNG used as a mask so it takes the link colour like the font icons. */
+  .sidebar-links .cv-icon {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.12em;
+    background-color: currentColor;
+    -webkit-mask: url("/icons/business_13991909.png") center / contain no-repeat;
+    mask: url("/icons/business_13991909.png") center / contain no-repeat;
+  }
+
   .sidebar .theme-toggle {
     padding: 0;
     border: 0;
@@ -227,7 +238,7 @@
           <i class="ai ai-orcid" aria-hidden="true"></i>
         </a>
         <a href="{{ '/resume/CV_RicardGrebol.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" data-tooltip="CV" aria-label="CV">
-          <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+          <span class="cv-icon" aria-hidden="true"></span>
         </a>
         <button type="button" class="theme-toggle" data-tooltip="Dark mode" aria-label="Switch to dark mode">
           <i class="fa-solid fa-moon" aria-hidden="true"></i>
