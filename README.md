@@ -108,7 +108,11 @@ changing their tags, regenerate the tag pages with:
 python tag_generator.py
 ```
 
-MathJax is available for mathematical content. Google Analytics stays
+MathJax is available for mathematical content. Visitor statistics use
+GoatCounter (no cookies); the dashboard is at
+`https://<goatcounter>.goatcounter.com`, where `<goatcounter>` is the site code
+in `_config.yml`. Visit the site with `#toggle-goatcounter` appended to the URL
+to stop counting your own visits in that browser. Google Analytics stays
 disabled while `google_analytics` is empty in `_config.yml`. Disqus is
 configured through `disqus.shortname` in the same file.
 
@@ -157,6 +161,9 @@ cover the replaceable content of `papers/`, `photos/`, `resume/`, `icons/` or
 - `_includes/disqus_comments.html`: adds Disqus comments when configured.
 - `_includes/google_analytics.html`: loads Google Analytics 4 only if an ID is
   set in `_config.yml`.
+- `_includes/goatcounter.html`: loads GoatCounter analytics when
+  `goatcounter` is set in `_config.yml`, and counts clicks on PDF links
+  (papers, CV) as events.
 - `_includes/head.html`: builds the `<head>` with metadata, initial colour
   mode, stylesheets, favicon, feed, MathJax, Font Awesome, Academicons and SEO.
 - `_includes/icon_link.html`: helper for links made of an icon and text.

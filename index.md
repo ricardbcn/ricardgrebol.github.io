@@ -103,27 +103,8 @@ text-align: justify
   </dt>
 
   <dd class="indented">
-    <p>with <a href="https://sites.google.com/site/borgin/" target="_blank">Boris Ginzburg</a> and <a href="https://janstuhler.com/" target="_blank">Jan Stuhler</a><br>
-    <i>Draft available upon request</i>
+    <p>with <a href="https://sites.google.com/site/borgin/" target="_blank">Boris Ginzburg</a> and <a href="https://janstuhler.com/" target="_blank">Jan Stuhler</a>
   </p>
-
-  <p class="paper-row" style="margin:1px 0 0;">
-    <a href="#" class="abs-toggle"
-      onclick="const el=document.getElementById('abstract_citizenship');const open=el.hidden;el.hidden=!open;this.querySelector('.sign').textContent=open?'–':'+';return false;">
-      <span class="sign">+</span> Abstract
-    </a>
-  </p>
-
-  <div id="abstract_citizenship" hidden>
-    <p>Does birthright citizenship foster the economic integration of minorities?
-    We study Latvia's Russian-speaking minority, most of whom received "non-citizen" status after independence and could naturalize only by passing an exam centered on Latvian language skills.
-    Children born after Latvian independence (August 21, 1991) instead received near-automatic birthright citizenship.
-    Comparing these two access regimes in a regression discontinuity design, using full-count employer–employee records linked to census data, we estimate the effect of removing the conditions attached to citizenship.
-    In contrast to prior work on immigrant naturalization, we find that birthright citizenship reduced integration: children born just after the cutoff completed 0.26 fewer years of schooling, were 4.4 percentage points less likely to attend college, and had lower employment and wages; placebo estimates for the unaffected ethnic Latvian majority are a precise zero.
-    These effects reflect the incentives embedded in the two regimes: citizenship itself confers few additional economic benefits in Latvia, but the exam rewards language skills that are complementary to education.
-    Consistent with this mechanism, which we formalize in a simple model, the returns to schooling drop discontinuously at the cutoff.
-    The effects of citizenship policy thus hinge on the incentives it creates: where citizenship raises the returns to skills, granting it at birth encourages their acquisition; where skills are instead a precondition for citizenship, granting it at birth may remove the incentive to acquire them.</p>
-  </div>
   </dd>
 
   <div class="paper-spacer"></div>
@@ -133,26 +114,8 @@ text-align: justify
   </dt>
 
   <dd class="indented">
-    <p>with <a href="https://sites.google.com/site/lenahensvik" target="_blank">Lena Hensvik</a>, <a href="https://sites.google.com/site/tlebarbanchon/home" target="_blank">Thomas Le Barbanchon</a>, and <a href="https://sites.google.com/site/oskarskans/home" target="_blank">Oskar Nordström Skans</a><br>
-    <i>Draft available upon request</i>
+    <p>with <a href="https://sites.google.com/site/lenahensvik" target="_blank">Lena Hensvik</a>, <a href="https://sites.google.com/site/tlebarbanchon/home" target="_blank">Thomas Le Barbanchon</a>, and <a href="https://sites.google.com/site/oskarskans/home" target="_blank">Oskar Nordström Skans</a>
   </p>
-
-  <p class="paper-row" style="margin:1px 0 0;">
-    <a href="#" class="abs-toggle"
-      onclick="const el=document.getElementById('abstract_firmattractiveness');const open=el.hidden;el.hidden=!open;this.querySelector('.sign').textContent=open?'–':'+';return false;">
-      <span class="sign">+</span> Abstract
-    </a>
-  </p>
-
-  <div id="abstract_firmattractiveness" hidden>
-    <p>Using linked data on individual online job-search behavior and administrative records of workers and firms, we document that more productive firms attract more job seekers.
-    By analyzing detailed search and application behaviors of both employed and unemployed individuals, we estimate firm attractiveness, controlling for job seeker characteristics and occupation-by-market fixed effects.
-    We validate this measure through out-of-sample predictions and its alignment with observed job mobility patterns.
-    Our analysis reveals that firm attractiveness is positively associated with firm productivity and wage premiums, even within industries.
-    The association between firm attractiveness and productivity remains even after controlling for AKM firm wage effects, indicating that productive firms provide attractive non-wage amenities.
-    Productivity dispersion is lower in industries where workers have particularly strong preferences for working in more productive firms.
-    These results indicate that worker preferences can affect aggregate misallocation.</p>
-  </div>
   </dd>
 
 </dl>

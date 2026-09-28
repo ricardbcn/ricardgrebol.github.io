@@ -25,6 +25,9 @@ disqus:
 # Optional Google Analytics 4 measurement ID. Leave blank to disable analytics.
 google_analytics: ''
 
+# GoatCounter site code (the CODE in CODE.goatcounter.com). Leave blank to disable.
+goatcounter: 'ricardgrebol'
+
 # Default values applied by Jekyll.
 defaults:
   -
